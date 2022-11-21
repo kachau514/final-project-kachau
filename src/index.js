@@ -27,7 +27,7 @@ function displayForecast(response) {
                 )}°C</div>
                 <div class="col-6 temp-lo text-center text-muted">${Math.round(
                   response.data.daily[cardNumber].temperature.minimum
-                )}C</div>
+                )}°C</div>
               </div>
             </div>`;
     cardNumber = cardNumber + 1;
