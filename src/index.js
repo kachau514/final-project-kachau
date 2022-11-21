@@ -1,15 +1,10 @@
 function displayForecast(response) {
-  console.log(response);
+  // console.log(response);
   let forecastElement = document.querySelector("#weather-card");
 
   let forecastHTML = `<div class="row justify-content-center">`;
-  let newDay = [
-    shortDays[now.getDay() + 1],
-    shortDays[now.getDay() + 2],
-    shortDays[now.getDay() + 3],
-    shortDays[now.getDay() + 4],
-    shortDays[now.getDay() + 5],
-  ];
+
+  let cardNumber = 0;
 
   newDay.forEach(function (day) {
     forecastHTML =
@@ -22,13 +17,20 @@ function displayForecast(response) {
                 <div class="col bg-dark text-white text-center">${day}</div>
               </div>
               <div class="row">
-                <div class="col text-center my-2">☀️</div>
+                <div class="col text-center my-2"><img src="${
+                  response.data.daily[cardNumber].condition.icon_url
+                }"></div>
               </div>
               <div class="row mb-2">
-                <div class="col-6 temp-hi text-center">21°C</div>
-                <div class="col-6 temp-lo text-center text-muted">12°C</div>
+                <div class="col-6 temp-hi text-center">${Math.round(
+                  response.data.daily[cardNumber].temperature.maximum
+                )}°C</div>
+                <div class="col-6 temp-lo text-center text-muted">${Math.round(
+                  response.data.daily[cardNumber].temperature.minimum
+                )}C</div>
               </div>
             </div>`;
+    cardNumber = cardNumber + 1;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -142,6 +144,25 @@ let days = [
 ];
 
 let shortDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+let n = 0;
+let newDay = [];
+let displayedDay = now.getDay();
+displayedDay = displayedDay + 1;
+while (n < 5) {
+  if (displayedDay > 6) {
+    displayedDay = 0;
+    newDay.push(shortDays[displayedDay]);
+    n++;
+    displayedDay++;
+  } else {
+    newDay.push(shortDays[displayedDay]);
+    n++;
+    displayedDay++;
+  }
+}
+console.log(newDay);
+
 let day = days[now.getDay()];
 let hour = now.getHours();
 let minutes = String(now.getMinutes()).padStart(2, "0");
