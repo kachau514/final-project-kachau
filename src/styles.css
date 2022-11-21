@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(230, 173, 194);
+}
+
+h1 {
+}
+
+h2 {
+}
+
+footer {
+}
+
+.weather-box {
+  background-color: white;
+  margin-top: 40px;
+  padding: 40px 0;
+  border-radius: 5px;
+}
+.current-day {
+  margin: 20px;
+}
+
+.current-day .active {
+  color: black;
+  cursor: default;
+}
+
+.current-day .active:hover {
+  text-decoration: none;
+}
+
+.mainTemperature {
+  font-size: 18px;
+}
+
+.weather-forecast {
+  margin: 20px 0;
+}
+
+#current-temp {
+  font-size: 32px;
+  font-weight: bold;
+}
