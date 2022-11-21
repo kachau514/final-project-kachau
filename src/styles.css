@@ -3,12 +3,14 @@ body {
 }
 
 h1 {
+  text-align: center;
 }
 
 h2 {
 }
 
 footer {
+  text-align: center;
 }
 
 .weather-box {

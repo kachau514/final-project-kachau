@@ -18,32 +18,11 @@
     <div class="container">
       <div class="row justify-content-center weather-box">
         <div class="col-8">
-          <h1>Weather Me App</h1>
-          <!--Begin form-->
-          <form id="search-form">
-            <div class="row justify-content-center">
-              <div class="col">
-                <div class="form-group">
-                  <input
-                    type="search"
-                    class="form-control border rounded-pill"
-                    id="city-input"
-                    aria-described="cityHelp"
-                    placeholder="Enter a city name"
-                    autocomplete="off"
-                  />
-                  <small id="cityHelp" class="form-text text-muted"
-                    >Get the current weather forecast by clicking Search</small
-                  >
-                </div>
-              </div>
-              <div class="col">
-                <button type="submit" class="btn btn-primary">Search</button>
-              </div>
-            </div>
-          </form>
+          <h1 class="my-5">Weather Me App</h1>
+
           <!--Current Day-->
-          <div class="row current-day justify-content-center">
+          <h3>What to Expect When You're About to Step Outside</h3>
+          <div class="row current-day justify-content-center bg-light p-2">
             <div class="col-8">
               <div class="row">
                 <div class="col-12"><h2 id="current-city"></h2></div>
@@ -70,21 +49,137 @@
               </div>
             </div>
           </div>
+          <!--Weather forecast-->
+          <h3 class="my-4">Mirror, mirror on the wall, show me the future!</h3>
 
-          <footer>
-            This project was coded by An Chau and is
-            <a
-              href="https://github.com/kachau514/vanilla-weather-app"
-              target="_blank"
-              >open-sourced on GitHub</a
-            >
-            and hosted on
-            <a href="https://chic-selkie-814317.netlify.app/" target="_blank"
-              >Netlify</a
-            >
-          </footer>
+          <div id="weather-card">
+            <div class="row justify-content-center">
+              <!--Day Card 1-->
+
+              <div class="col-2 border border-dark rounded mx-2">
+                <div class="row">
+                  <div class="col bg-dark text-white text-center">SUN</div>
+                </div>
+                <div class="row">
+                  <div class="col text-center my-2">☀️</div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-6 temp-hi text-center">21°C</div>
+                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
+                </div>
+              </div>
+
+              <!--Day Card 2-->
+
+              <div class="col-2 border border-dark rounded mx-2">
+                <div class="row">
+                  <div class="col bg-dark text-white text-center">SUN</div>
+                </div>
+                <div class="row">
+                  <div class="col text-center my-2">☀️</div>
+                </div>
+                <div class="row">
+                  <div class="col-6 temp-hi text-center">21°C</div>
+                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
+                </div>
+              </div>
+
+              <!--Day Card 3-->
+
+              <div class="col-2 border border-dark rounded mx-2">
+                <div class="row">
+                  <div class="col bg-dark text-white text-center">SUN</div>
+                </div>
+                <div class="row">
+                  <div class="col text-center my-2">☀️</div>
+                </div>
+                <div class="row">
+                  <div class="col-6 temp-hi text-center">21°C</div>
+                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
+                </div>
+              </div>
+
+              <!--Day Card 4-->
+
+              <div class="col-2 border border-dark rounded mx-2">
+                <div class="row">
+                  <div class="col bg-dark text-white text-center">SUN</div>
+                </div>
+                <div class="row">
+                  <div class="col text-center my-2">☀️</div>
+                </div>
+                <div class="row">
+                  <div class="col-6 temp-hi text-center">21°C</div>
+                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
+                </div>
+              </div>
+
+              <!--Day Card 5-->
+
+              <div class="col-2 border border-dark rounded mx-2">
+                <div class="row">
+                  <div class="col bg-dark text-white text-center">SUN</div>
+                </div>
+                <div class="row">
+                  <div class="col text-center my-2">☀️</div>
+                </div>
+                <div class="row">
+                  <div class="col-6 temp-hi text-center">21°C</div>
+                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
+                </div>
+              </div>
+            </div>
+
+            <!--Begin form-->
+            <h3 class="my-4">
+              Dream a Little Dream and Search for Another City
+            </h3>
+            <div class="row my-4">
+              <div class="col">
+                <form id="search-form">
+                  <div class="row justify-content-center">
+                    <div class="col">
+                      <div class="form-group">
+                        <input
+                          type="search"
+                          class="form-control border rounded-pill"
+                          id="city-input"
+                          aria-described="cityHelp"
+                          placeholder="Enter a city name"
+                          autocomplete="off"
+                        />
+                        <small id="cityHelp" class="form-text text-muted"
+                          >Get the current weather forecast by clicking
+                          Search</small
+                        >
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button type="submit" class="btn btn-primary">
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!--End form-->
+          </div>
         </div>
       </div>
+      <!--end weather forecast-->
+      <footer class="m-2 text-muted">
+        This project was coded by An Chau and is
+        <a
+          href="https://github.com/kachau514/vanilla-weather-app"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and hosted on
+        <a href="https://chic-selkie-814317.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
     </div>
     <script src="src/index.js"></script>
   </body>
