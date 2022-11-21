@@ -1,9 +1,17 @@
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#weather-card");
 
   let forecastHTML = `<div class="row justify-content-center">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
+  let newDay = [
+    shortDays[now.getDay() + 1],
+    shortDays[now.getDay() + 2],
+    shortDays[now.getDay() + 3],
+    shortDays[now.getDay() + 4],
+    shortDays[now.getDay() + 5],
+  ];
+
+  newDay.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       ` <div
@@ -28,6 +36,14 @@ function displayForecast() {
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function getGeolocForecast(city) {
+  let apiKey = "240eof8530cet06fbe36f1fa5d44040b";
+  let apiEndpoint = "https://api.shecodes.io/weather/v1/forecast";
+  let unit = "metric";
+  let apiUrl = `${apiEndpoint}?query=${city}&key=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayGeolocTemp(response) {
@@ -61,7 +77,8 @@ function displayGeolocTemp(response) {
   altElement.setAttribute("alt", description);
   windElement.innerHTML = `Wind: ${wind} ${windUnit}`;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
-  displayForecast();
+
+  getGeolocForecast(response.data.city);
 }
 
 function retrieveGeolocPosition(position) {
@@ -123,6 +140,8 @@ let days = [
   "Friday",
   "Saturday",
 ];
+
+let shortDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 let day = days[now.getDay()];
 let hour = now.getHours();
 let minutes = String(now.getMinutes()).padStart(2, "0");
