@@ -1,3 +1,31 @@
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-card");
+
+  let forecastHTML = `<div class="row justify-content-center">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div
+              class="col-2 border border-dark rounded mx-2"
+              id="weather-card"
+            >
+              <div class="row">
+                <div class="col bg-dark text-white text-center">${day}</div>
+              </div>
+              <div class="row">
+                <div class="col text-center my-2">☀️</div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-6 temp-hi text-center">21°C</div>
+                <div class="col-6 temp-lo text-center text-muted">12°C</div>
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -33,6 +61,7 @@ function displayGeolocTemp(response) {
   altElement.setAttribute("alt", description);
   windElement.innerHTML = `Wind: ${wind} ${windUnit}`;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
+  displayForecast();
 }
 
 function retrieveGeolocPosition(position) {

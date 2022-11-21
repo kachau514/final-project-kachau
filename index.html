@@ -51,123 +51,42 @@
           </div>
           <!--Weather forecast-->
           <h3 class="my-4">Mirror, mirror on the wall, show me the future!</h3>
-
-          <div id="weather-card">
-            <div class="row justify-content-center">
-              <!--Day Card 1-->
-
-              <div class="col-2 border border-dark rounded mx-2">
-                <div class="row">
-                  <div class="col bg-dark text-white text-center">SUN</div>
-                </div>
-                <div class="row">
-                  <div class="col text-center my-2">☀️</div>
-                </div>
-                <div class="row mb-2">
-                  <div class="col-6 temp-hi text-center">21°C</div>
-                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
-                </div>
-              </div>
-
-              <!--Day Card 2-->
-
-              <div class="col-2 border border-dark rounded mx-2">
-                <div class="row">
-                  <div class="col bg-dark text-white text-center">SUN</div>
-                </div>
-                <div class="row">
-                  <div class="col text-center my-2">☀️</div>
-                </div>
-                <div class="row">
-                  <div class="col-6 temp-hi text-center">21°C</div>
-                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
-                </div>
-              </div>
-
-              <!--Day Card 3-->
-
-              <div class="col-2 border border-dark rounded mx-2">
-                <div class="row">
-                  <div class="col bg-dark text-white text-center">SUN</div>
-                </div>
-                <div class="row">
-                  <div class="col text-center my-2">☀️</div>
-                </div>
-                <div class="row">
-                  <div class="col-6 temp-hi text-center">21°C</div>
-                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
-                </div>
-              </div>
-
-              <!--Day Card 4-->
-
-              <div class="col-2 border border-dark rounded mx-2">
-                <div class="row">
-                  <div class="col bg-dark text-white text-center">SUN</div>
-                </div>
-                <div class="row">
-                  <div class="col text-center my-2">☀️</div>
-                </div>
-                <div class="row">
-                  <div class="col-6 temp-hi text-center">21°C</div>
-                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
-                </div>
-              </div>
-
-              <!--Day Card 5-->
-
-              <div class="col-2 border border-dark rounded mx-2">
-                <div class="row">
-                  <div class="col bg-dark text-white text-center">SUN</div>
-                </div>
-                <div class="row">
-                  <div class="col text-center my-2">☀️</div>
-                </div>
-                <div class="row">
-                  <div class="col-6 temp-hi text-center">21°C</div>
-                  <div class="col-6 temp-lo text-center text-muted">12°C</div>
-                </div>
-              </div>
-            </div>
-
-            <!--Begin form-->
-            <h3 class="my-4">
-              Dream a Little Dream and Search for Another City
-            </h3>
-            <div class="row my-4">
-              <div class="col">
-                <form id="search-form">
-                  <div class="row justify-content-center">
-                    <div class="col">
-                      <div class="form-group">
-                        <input
-                          type="search"
-                          class="form-control border rounded-pill"
-                          id="city-input"
-                          aria-described="cityHelp"
-                          placeholder="Enter a city name"
-                          autocomplete="off"
-                        />
-                        <small id="cityHelp" class="form-text text-muted"
-                          >Get the current weather forecast by clicking
-                          Search</small
-                        >
-                      </div>
-                    </div>
-                    <div class="col">
-                      <button type="submit" class="btn btn-primary">
-                        Search
-                      </button>
+          <div id="weather-card"></div>
+          <!--Begin form-->
+          <h3 class="my-4">Dream a Little Dream and Search for Another City</h3>
+          <div class="row my-4">
+            <div class="col">
+              <form id="search-form">
+                <div class="row justify-content-center">
+                  <div class="col">
+                    <div class="form-group">
+                      <input
+                        type="search"
+                        class="form-control border rounded-pill"
+                        id="city-input"
+                        aria-described="cityHelp"
+                        placeholder="Enter a city name"
+                        autocomplete="off"
+                      />
+                      <small id="cityHelp" class="form-text text-muted"
+                        >Get the current weather forecast by clicking
+                        Search</small
+                      >
                     </div>
                   </div>
-                </form>
-              </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-primary">
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <!--End form-->
           </div>
+          <!--End form-->
         </div>
       </div>
-      <!--end weather forecast-->
+
       <footer class="m-2 text-muted">
         This project was coded by An Chau and is
         <a
